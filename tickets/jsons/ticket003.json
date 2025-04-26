@@ -1,0 +1,14 @@
+{
+  "gt_parse": {
+    "nombre": "Mercadona",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Pedro Ximenez",
+        "importePorUnidad": "6,00",
+        "importeTotal": "6,00"
+      }
+    ],
+    "total_ticket": "6,00"
+  }
+}

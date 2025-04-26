@@ -1,0 +1,14 @@
+{
+  "gt_parse": {
+    "nombre": "Decathlon",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Crema antirrozaduras",
+        "importePorUnidad": "7,99",
+        "importeTotal": "7,99"
+      }
+    ],
+    "total_ticket": "7,99"
+  }
+}

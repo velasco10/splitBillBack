@@ -1,0 +1,26 @@
+{
+  "gt_parse": {
+    "nombre": "Mercadona",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Crunchy picante",
+        "importePorUnidad": "1,00",
+        "importeTotal": "1,00"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Caldo paella/marisco",
+        "importePorUnidad": "2,10",
+        "importeTotal": "2,10"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Arroz vaporizado",
+        "importePorUnidad": "1,65",
+        "importeTotal": "1,65"
+      }
+    ],
+    "total_ticket": "4,75"
+  }
+}
