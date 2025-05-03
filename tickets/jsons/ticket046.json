@@ -1,6 +1,23 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "4", "concepto": "Leche Desn", "importePorUnidad": "0,79", "importeTotal": "3,16" },
+      { "cantidad": "4", "concepto": "Cola Zero 2L", "importePorUnidad": "0,75", "importeTotal": "3,00" },
+      { "cantidad": "1", "concepto": "40 B.Mini Papelera", "importePorUnidad": "1,35", "importeTotal": "1,35" },
+      { "cantidad": "1", "concepto": "Café Soluble Classic", "importePorUnidad": "3,40", "importeTotal": "3,40" },
+      { "cantidad": "1", "concepto": "T. 100%Integrales", "importePorUnidad": "1,65", "importeTotal": "1,65" },
+      { "cantidad": "1", "concepto": "Queso Rallado Pizza", "importePorUnidad": "1,59", "importeTotal": "1,59" },
+      { "cantidad": "1", "concepto": "Ñoquis de Patata", "importePorUnidad": "1,02", "importeTotal": "1,02" },
+      { "cantidad": "1", "concepto": "Taquito de Jamón", "importePorUnidad": "2,65", "importeTotal": "2,65" },
+      { "cantidad": "1", "concepto": "Arroz Redondo", "importePorUnidad": "1,30", "importeTotal": "1,30" },
+      { "cantidad": "1", "concepto": "Vinagre Limpieza", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Caldo Pollo", "importePorUnidad": "0,70", "importeTotal": "0,70" },
+      { "cantidad": "1", "concepto": "Garbanzo M.Cocido", "importePorUnidad": "0,71", "importeTotal": "0,71" },
+      { "cantidad": "1", "concepto": "Lenteja Cocida", "importePorUnidad": "0,70", "importeTotal": "0,70" },
+      { "cantidad": "1", "concepto": "Higienico Doble Roll", "importePorUnidad": "2,40", "importeTotal": "2,40" },
+      { "cantidad": "1", "concepto": "Aceite Girasol", "importePorUnidad": "1,48", "importeTotal": "1,48" }
+    ],
+    "totalTicket": "26,01"
   }
 }

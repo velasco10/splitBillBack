@@ -1,6 +1,26 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Cola Zero Zero 2L",
+        "importePorUnidad": "0,75",
+        "importeTotal": "0,75"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Bacon Lonchas",
+        "importePorUnidad": "2,10",
+        "importeTotal": "2,10"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Burger M Vac/Ce 1000g",
+        "importePorUnidad": "7,00",
+        "importeTotal": "7,00"
+      }
+    ],
+    "totalTicket": "9,85"
   }
 }

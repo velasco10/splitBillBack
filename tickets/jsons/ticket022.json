@@ -1,6 +1,26 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Cebolla Cong Zip", "importePorUnidad": "1,02", "importeTotal": "1,02" },
+      { "cantidad": "1", "concepto": "Queso Rallado Pizza", "importePorUnidad": "1,57", "importeTotal": "1,57" },
+      { "cantidad": "1", "concepto": "Quema Grasas", "importePorUnidad": "1,05", "importeTotal": "1,05" },
+      { "cantidad": "1", "concepto": "Gelly 0% Dulces", "importePorUnidad": "1,00", "importeTotal": "1,00" },
+      { "cantidad": "1", "concepto": "Ñoquis de Patata", "importePorUnidad": "1,02", "importeTotal": "1,02" },
+      { "cantidad": "1", "concepto": "Azúcar", "importePorUnidad": "1,10", "importeTotal": "1,10" },
+      { "cantidad": "1", "concepto": "Queso Untar Light", "importePorUnidad": "1,32", "importeTotal": "1,32" },
+      { "cantidad": "4", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "2,80" },
+      { "cantidad": "1", "concepto": "12 Huevos Medianos-M", "importePorUnidad": "2,04", "importeTotal": "2,04" },
+      { "cantidad": "1", "concepto": "Papel Aluminio", "importePorUnidad": "2,00", "importeTotal": "2,00" },
+      { "cantidad": "1", "concepto": "Pañuelos 4 Cap 10x10", "importePorUnidad": "1,05", "importeTotal": "1,05" },
+      { "cantidad": "1", "concepto": "Vinagre Limpieza", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Ketchup", "importePorUnidad": "1,15", "importeTotal": "1,15" },
+      { "cantidad": "1", "concepto": "Aceite Girasol", "importePorUnidad": "1,48", "importeTotal": "1,48" },
+      { "cantidad": "3", "concepto": "Leche Desn", "importePorUnidad": "0,79", "importeTotal": "2,37" },
+      { "cantidad": "1", "concepto": "Pimiento Rojo (0,188kg 2,54€/kg)", "importePorUnidad": "2,54", "importeTotal": "0,48" },
+      { "cantidad": "1", "concepto": "Calabacín Verde (0,704kg 1,85€/kg)", "importePorUnidad": "1,85", "importeTotal": "1,30" },
+      { "cantidad": "1", "concepto": "Patata (1,632kg 2,03€/kg)", "importePorUnidad": "2,03", "importeTotal": "3,31" }
+    ],
+    "totalTicket": "26,96"
   }
 }

@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Agua 9L", "importePorUnidad": "4,20", "importeTotal": "4,20" }
+    ],
+    "totalTicket": "4,20"
   }
 }

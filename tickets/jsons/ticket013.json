@@ -1,6 +1,14 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Correos",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Carta Ordinaria",
+        "importePorUnidad": "0,82",
+        "importeTotal": "0,82"
+      }
+    ],
+    "totalTicket": "0,82"
   }
 }

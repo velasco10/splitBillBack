@@ -1,6 +1,21 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Higienico Doble Roll", "importePorUnidad": "2,35", "importeTotal": "2,35" },
+      { "cantidad": "1", "concepto": "Tortellini Queso", "importePorUnidad": "1,35", "importeTotal": "1,35" },
+      { "cantidad": "4", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "2,80" },
+      { "cantidad": "1", "concepto": "Tomate Triturado", "importePorUnidad": "0,72", "importeTotal": "0,72" },
+      { "cantidad": "1", "concepto": "Aceite Girasol", "importePorUnidad": "1,45", "importeTotal": "1,45" },
+      { "cantidad": "1", "concepto": "T. 100%Integrales", "importePorUnidad": "1,65", "importeTotal": "1,65" },
+      { "cantidad": "1", "concepto": "Iceberg 250 Gr", "importePorUnidad": "0,86", "importeTotal": "0,86" },
+      { "cantidad": "1", "concepto": "Atun Claro Oliva", "importePorUnidad": "1,60", "importeTotal": "1,60" },
+      { "cantidad": "1", "concepto": "Copos de Avena", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "3", "concepto": "Leche Desn", "importePorUnidad": "0,80", "importeTotal": "2,40" },
+      { "cantidad": "1", "concepto": "Zanahoria 500g", "importePorUnidad": "0,85", "importeTotal": "0,85" },
+      { "cantidad": "1", "concepto": "Queso Rallado Pizza", "importePorUnidad": "1,54", "importeTotal": "1,54" },
+      { "cantidad": "1", "concepto": "Desnatado Natural X", "importePorUnidad": "1,05", "importeTotal": "1,05" }
+    ],
+    "totalTicket": "19,52"
   }
 }

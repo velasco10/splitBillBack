@@ -1,6 +1,13 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Fuet Espetec Extra", "importePorUnidad": "2,57", "importeTotal": "2,57" },
+      { "cantidad": "1", "concepto": "Leche Desn", "importePorUnidad": "0,79", "importeTotal": "0,79" },
+      { "cantidad": "1", "concepto": "Leche Merengada", "importePorUnidad": "2,90", "importeTotal": "2,90" },
+      { "cantidad": "1", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "0,70" },
+      { "cantidad": "1", "concepto": "Patata (0,620kg 2,03€/kg)", "importePorUnidad": "2,03", "importeTotal": "1,26" }
+    ],
+    "totalTicket": "8,22"
   }
 }

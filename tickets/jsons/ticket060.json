@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Cola Zero 2L", "importePorUnidad": "0,75", "importeTotal": "0,75" }
+    ],
+    "totalTicket": "0,75"
   }
 }

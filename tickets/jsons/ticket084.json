@@ -1,6 +1,21 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "4", "concepto": "Leche Desn", "importePorUnidad": "0,80", "importeTotal": "3,20" },
+      { "cantidad": "4", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "2,80" },
+      { "cantidad": "2", "concepto": "Pan M.100% Integral", "importePorUnidad": "0,95", "importeTotal": "1,90" },
+      { "cantidad": "1", "concepto": "T. 100%Integrales", "importePorUnidad": "1,65", "importeTotal": "1,65" },
+      { "cantidad": "1", "concepto": "Kit Depil Facial", "importePorUnidad": "2,00", "importeTotal": "2,00" },
+      { "cantidad": "1", "concepto": "Sirope de Agave", "importePorUnidad": "2,60", "importeTotal": "2,60" },
+      { "cantidad": "1", "concepto": "Azucar", "importePorUnidad": "1,45", "importeTotal": "1,45" },
+      { "cantidad": "1", "concepto": "Vinagre Limpieza", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Lavavajillas Ultra", "importePorUnidad": "1,90", "importeTotal": "1,90" },
+      { "cantidad": "1", "concepto": "Infusion Figura", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "1", "concepto": "Patata (0,946kg 1,99€/kg)", "importePorUnidad": "1,99", "importeTotal": "1,83" },
+      { "cantidad": "1", "concepto": "Pimiento Freir (0,144kg 2,29€/kg)", "importePorUnidad": "2,29", "importeTotal": "0,33" },
+      { "cantidad": "1", "concepto": "Calabacin Verde (0,292kg 1,00€/kg)", "importePorUnidad": "1,00", "importeTotal": "0,29" }
+    ],
+    "totalTicket": "22,10"
   }
 }

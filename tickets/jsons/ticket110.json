@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Food Service Project S.A.",
+    "items": [
+      { "cantidad": "3", "concepto": "Menu Mediodia", "importePorUnidad": "13,95", "importeTotal": "41,85" },
+      { "cantidad": "1", "concepto": "Bac Chees Fries", "importePorUnidad": "10,95", "importeTotal": "10,95" }
+    ],
+    "totalTicket": "52,80"
   }
 }

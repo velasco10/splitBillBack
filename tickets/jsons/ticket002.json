@@ -4,11 +4,11 @@
     "items": [
       {
         "cantidad": "1",
-        "concepto": "Crema antirrozaduras",
+        "concepto": "Crema Antirrozaduras 100 ml",
         "importePorUnidad": "7,99",
         "importeTotal": "7,99"
       }
     ],
-    "total_ticket": "7,99"
+    "totalTicket": "7,99"
   }
 }

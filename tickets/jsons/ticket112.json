@@ -1,6 +1,11 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Irish Temple Siglo XXI, S.L.",
+    "items": [
+      { "concepto": "Murphys Media Pinta", "cantidad": "4", "importePorUnidad": "4,00", "importeTotal": "16,00" },
+      { "concepto": "Matusalem 7 Años", "cantidad": "2", "importePorUnidad": "8,00", "importeTotal": "16,00" },
+      { "concepto": "Johnnie Walker Black Label", "cantidad": "2", "importePorUnidad": "9,00", "importeTotal": "18,00" }
+    ],
+    "totalTicket": "50,00"
   }
 }

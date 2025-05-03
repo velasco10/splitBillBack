@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Pipa gigante sal", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "1", "concepto": "Pizza boloñesa", "importePorUnidad": "2,60", "importeTotal": "2,60" }
+    ],
+    "totalTicket": "3,80"
   }
 }

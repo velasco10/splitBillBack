@@ -1,6 +1,22 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Rollo hogar doble", "importePorUnidad": "2,35", "importeTotal": "2,35" },
+      { "cantidad": "1", "concepto": "Puré de patatas", "importePorUnidad": "2,00", "importeTotal": "2,00" },
+      { "cantidad": "1", "concepto": "Desnatado natural X", "importePorUnidad": "1,05", "importeTotal": "1,05" },
+      { "cantidad": "1", "concepto": "Higiénico doble roll", "importePorUnidad": "2,40", "importeTotal": "2,40" },
+      { "cantidad": "1", "concepto": "Salsa de soja salada", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "1", "concepto": "Jamón cocido LF", "importePorUnidad": "2,05", "importeTotal": "2,05" },
+      { "cantidad": "1", "concepto": "200 servil. blancas", "importePorUnidad": "1,25", "importeTotal": "1,25" },
+      { "cantidad": "1", "concepto": "Ketchup", "importePorUnidad": "1,15", "importeTotal": "1,15" },
+      { "cantidad": "1", "concepto": "Spray ropa limpia", "importePorUnidad": "1,15", "importeTotal": "1,15" },
+      { "cantidad": "1", "concepto": "Estropajo verde", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Apósitos aqua", "importePorUnidad": "1,10", "importeTotal": "1,10" },
+      { "cantidad": "1", "concepto": "Judía plana", "importePorUnidad": "1,25", "importeTotal": "1,25" },
+      { "cantidad": "4", "concepto": "Cola Zero 2L", "importePorUnidad": "0,75", "importeTotal": "3,00" },
+      { "cantidad": "4", "concepto": "Leche desnatada", "importePorUnidad": "0,79", "importeTotal": "3,16" }
+    ],
+    "totalTicket": "24,01"
   }
 }

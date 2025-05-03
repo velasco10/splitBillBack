@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "ARROZ REDONDO", "importePorUnidad": "1,30", "importeTotal": "1,30" },
+      { "cantidad": "1", "concepto": "SALSA DE SOJA SALADA", "importePorUnidad": "1,20", "importeTotal": "1,20" }
+    ],
+    "totalTicket": "2,50"
   }
 }

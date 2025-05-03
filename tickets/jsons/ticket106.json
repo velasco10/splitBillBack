@@ -1,6 +1,17 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Cartelera",
+    "items": [
+      { "cantidad": "1", "concepto": "Coca Cola Zero", "importePorUnidad": "3,00", "importeTotal": "3,00" },
+      { "cantidad": "1", "concepto": "Paulaner Pequeña", "importePorUnidad": "3,50", "importeTotal": "3,50" },
+      { "cantidad": "1", "concepto": "Bacardi + Coca Cola", "importePorUnidad": "6,50", "importeTotal": "6,50" },
+      { "cantidad": "1", "concepto": "Coca Cola Zero", "importePorUnidad": "3,00", "importeTotal": "3,00" },
+      { "cantidad": "1", "concepto": "Bacardi + Coca Cola", "importePorUnidad": "6,50", "importeTotal": "6,50" },
+      { "cantidad": "1", "concepto": "Palomitas de Pollo", "importePorUnidad": "10,90", "importeTotal": "10,90" },
+      { "cantidad": "1", "concepto": "Coca Cola Zero", "importePorUnidad": "3,00", "importeTotal": "3,00" },
+      { "cantidad": "1", "concepto": "Bacardi + Coca Cola", "importePorUnidad": "6,50", "importeTotal": "6,50" },
+      { "cantidad": "1", "concepto": "Paulaner Pequeña", "importePorUnidad": "3,50", "importeTotal": "3,50" }
+    ],
+    "totalTicket": "46,40"
   }
 }

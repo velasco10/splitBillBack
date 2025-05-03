@@ -1,6 +1,13 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Cappuccino caramelo", "importePorUnidad": "2,95", "importeTotal": "2,95" },
+      { "cantidad": "1", "concepto": "Harina de trigo", "importePorUnidad": "0,71", "importeTotal": "0,71" },
+      { "cantidad": "1", "concepto": "Pan M.100% integral", "importePorUnidad": "0,95", "importeTotal": "0,95" },
+      { "cantidad": "1", "concepto": "Agua mineral", "importePorUnidad": "0,80", "importeTotal": "0,80" },
+      { "cantidad": "1", "concepto": "Patata (0,472kg 2,03€/kg)", "importePorUnidad": "2,03", "importeTotal": "0,96" }
+    ],
+    "totalTicket": "6,37"
   }
 }

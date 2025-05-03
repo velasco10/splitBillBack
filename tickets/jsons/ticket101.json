@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Hotel Reina del Sol Uno",
+    "items": [
+      { "cantidad": "1", "concepto": "Bacardi Blanco", "importePorUnidad": "4,00", "importeTotal": "4,00" }
+    ],
+    "totalTicket": "4,00"
   }
 }

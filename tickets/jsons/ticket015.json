@@ -1,6 +1,14 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Lanjaron Pack 6x1,5L",
+        "importePorUnidad": "3,78",
+        "importeTotal": "3,78"
+      }
+    ],
+    "totalTicket": "3,78"
   }
 }

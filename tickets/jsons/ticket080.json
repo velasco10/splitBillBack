@@ -1,6 +1,22 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Marias Doradas", "importePorUnidad": "1,45", "importeTotal": "1,45" },
+      { "cantidad": "1", "concepto": "Copos de Avena", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Garbanzo M.Cocido", "importePorUnidad": "0,71", "importeTotal": "0,71" },
+      { "cantidad": "1", "concepto": "Lenteja Cocida", "importePorUnidad": "0,80", "importeTotal": "0,80" },
+      { "cantidad": "1", "concepto": "Lejia Normal", "importePorUnidad": "0,80", "importeTotal": "0,80" },
+      { "cantidad": "4", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "2,80" },
+      { "cantidad": "2", "concepto": "Leche Desn", "importePorUnidad": "0,80", "importeTotal": "1,60" },
+      { "cantidad": "1", "concepto": "Atun Claro Oliva", "importePorUnidad": "1,60", "importeTotal": "1,60" },
+      { "cantidad": "1", "concepto": "Queso Sandwich", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "1", "concepto": "Queso Rallado Pizza", "importePorUnidad": "1,54", "importeTotal": "1,54" },
+      { "cantidad": "1", "concepto": "Aceite Girasol", "importePorUnidad": "1,45", "importeTotal": "1,45" },
+      { "cantidad": "1", "concepto": "Piña en su Jugo", "importePorUnidad": "1,85", "importeTotal": "1,85" },
+      { "cantidad": "1", "concepto": "Tomate Triturado", "importePorUnidad": "0,72", "importeTotal": "0,72" },
+      { "cantidad": "1", "concepto": "Patata (0,980kg 1,99€/kg)", "importePorUnidad": "1,99", "importeTotal": "1,95" }
+    ],
+    "totalTicket": "19,37"
   }
 }

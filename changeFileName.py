@@ -28,7 +28,7 @@ for img in imagenes:
     # Crear JSON correspondiente vacío
     json_path = os.path.join(carpeta_jsons, f"ticket{contador:03d}.json")
     with open(json_path, "w", encoding="utf-8") as f:
-        json.dump({"gt_parse": {"items": [], "total_ticket": ""}}, f, indent=2)
+        json.dump({"gt_parse": {"items": [], "totalTicket": ""}}, f, indent=2)
 
     print(f"✅ {img} → {nuevo_nombre} + JSON creado")
     contador += 1

@@ -1,6 +1,11 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Pat. Classicas", "importePorUnidad": "1,80", "importeTotal": "1,80" },
+      { "cantidad": "1", "concepto": "Bolsa Plastico", "importePorUnidad": "0,15", "importeTotal": "0,15" },
+      { "cantidad": "1", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "0,70" }
+    ],
+    "totalTicket": "2,65"
   }
 }

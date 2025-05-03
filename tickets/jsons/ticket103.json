@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Hotel Reina del Sol Uno",
+    "items": [
+      { "cantidad": "1", "concepto": "Bombon", "importePorUnidad": "2,40", "importeTotal": "2,40" }
+    ],
+    "totalTicket": "2,40"
   }
 }

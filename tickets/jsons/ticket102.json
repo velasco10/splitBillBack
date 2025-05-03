@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Hotel Reina del Sol Uno",
+    "items": [
+      { "cantidad": "1", "concepto": "Descf Leche Maq", "importePorUnidad": "1,90", "importeTotal": "1,90" }
+    ],
+    "totalTicket": "1,90"
   }
 }

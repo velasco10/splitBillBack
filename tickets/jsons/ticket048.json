@@ -1,6 +1,11 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Pat. Classicas", "importePorUnidad": "1,85", "importeTotal": "1,85" },
+      { "cantidad": "1", "concepto": "Tomate Frito Brick", "importePorUnidad": "1,35", "importeTotal": "1,35" },
+      { "cantidad": "1", "concepto": "Tarta Nata Chocolate", "importePorUnidad": "1,95", "importeTotal": "1,95" }
+    ],
+    "totalTicket": "5,15"
   }
 }

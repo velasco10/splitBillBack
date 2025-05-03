@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Jabon Manos Dermop", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Gel Biome Protect", "importePorUnidad": "3,90", "importeTotal": "3,90" }
+    ],
+    "totalTicket": "4,80"
   }
 }

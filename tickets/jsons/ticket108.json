@@ -1,6 +1,13 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "De Manila Restaurante",
+    "items": [
+      { "cantidad": "1", "concepto": "Refrescos", "importePorUnidad": "3,50", "importeTotal": "3,50" },
+      { "cantidad": "3", "concepto": "Mahou Tercio", "importePorUnidad": "3,50", "importeTotal": "10,50" },
+      { "cantidad": "1", "concepto": "Servicio Pan", "importePorUnidad": "2,00", "importeTotal": "2,00" },
+      { "cantidad": "1", "concepto": "Boquerones Fritos", "importePorUnidad": "10,00", "importeTotal": "10,00" },
+      { "cantidad": "1", "concepto": "Gambas al Ajillo", "importePorUnidad": "17,50", "importeTotal": "17,50" }
+    ],
+    "totalTicket": "43,50"
   }
 }

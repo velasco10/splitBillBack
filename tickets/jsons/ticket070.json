@@ -1,6 +1,26 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Jamon Pavo Finas Lon", "importePorUnidad": "1,66", "importeTotal": "1,66" },
+      { "cantidad": "1", "concepto": "Zanahoria Bolsa", "importePorUnidad": "1,09", "importeTotal": "1,09" },
+      { "cantidad": "1", "concepto": "Acelgas", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "1", "concepto": "Queso Rallado Pizza", "importePorUnidad": "1,54", "importeTotal": "1,54" },
+      { "cantidad": "1", "concepto": "12 Huevos Medianos-M", "importePorUnidad": "2,00", "importeTotal": "2,00" },
+      { "cantidad": "1", "concepto": "Infusion Figura", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "4", "concepto": "Leche Desn", "importePorUnidad": "0,80", "importeTotal": "3,20" },
+      { "cantidad": "3", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "2,10" },
+      { "cantidad": "1", "concepto": "Gelly 0% Dulces", "importePorUnidad": "1,00", "importeTotal": "1,00" },
+      { "cantidad": "1", "concepto": "Copos de Avena", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Piña en su Jugo", "importePorUnidad": "1,85", "importeTotal": "1,85" },
+      { "cantidad": "1", "concepto": "Aceite Girasol", "importePorUnidad": "1,45", "importeTotal": "1,45" },
+      { "cantidad": "1", "concepto": "Pan M.100% Integral", "importePorUnidad": "0,95", "importeTotal": "0,95" },
+      { "cantidad": "1", "concepto": "Sirope de Agave", "importePorUnidad": "2,60", "importeTotal": "2,60" },
+      { "cantidad": "1", "concepto": "Naranja (0,776kg 1,59€/kg)", "importePorUnidad": "1,59", "importeTotal": "1,23" },
+      { "cantidad": "1", "concepto": "Pimiento Rojo (0,228kg 1,79€/kg)", "importePorUnidad": "1,79", "importeTotal": "0,41" },
+      { "cantidad": "1", "concepto": "Pimiento Freir (0,098kg 2,29€/kg)", "importePorUnidad": "2,29", "importeTotal": "0,22" },
+      { "cantidad": "1", "concepto": "Patata (0,936kg 1,99€/kg)", "importePorUnidad": "1,99", "importeTotal": "1,86" }
+    ],
+    "totalTicket": "26,46"
   }
 }

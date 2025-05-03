@@ -4,11 +4,11 @@
     "items": [
       {
         "cantidad": "1",
-        "concepto": "Pat. Classicas",
-        "importePorUnidad": "1,90",
-        "importeTotal": "1,90"
+        "concepto": "Pedro Ximenez",
+        "importePorUnidad": "6,00",
+        "importeTotal": "6,00"
       }
     ],
-    "total_ticket": "1,90"
+    "totalTicket": "6,00"
   }
 }

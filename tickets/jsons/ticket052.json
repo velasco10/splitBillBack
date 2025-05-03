@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Marias Doradas", "importePorUnidad": "1,45", "importeTotal": "1,45" }
+    ],
+    "totalTicket": "1,45"
   }
 }

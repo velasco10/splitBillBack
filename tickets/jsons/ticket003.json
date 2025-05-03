@@ -2,13 +2,19 @@
   "gt_parse": {
     "nombre": "Mercadona",
     "items": [
-      {
-        "cantidad": "1",
-        "concepto": "Pedro Ximenez",
-        "importePorUnidad": "6,00",
-        "importeTotal": "6,00"
-      }
+      { "cantidad": "2", "concepto": "Pastel Crema 65%", "importePorUnidad": "0,40", "importeTotal": "0,80" },
+      { "cantidad": "1", "concepto": "Papel Higiénico 4 CA", "importePorUnidad": "3,65", "importeTotal": "3,65" },
+      { "cantidad": "1", "concepto": "Aceite Girasol", "importePorUnidad": "1,75", "importeTotal": "1,75" },
+      { "cantidad": "1", "concepto": "Pipa Gigante Sal", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "1", "concepto": "Vinagre Limpieza", "importePorUnidad": "0,90", "importeTotal": "0,90" },
+      { "cantidad": "1", "concepto": "Lejía Normal", "importePorUnidad": "0,80", "importeTotal": "0,80" },
+      { "cantidad": "1", "concepto": "Limón Exprimido", "importePorUnidad": "1,00", "importeTotal": "1,00" },
+      { "cantidad": "1", "concepto": "Lavavajillas Ultra", "importePorUnidad": "1,90", "importeTotal": "1,90" },
+      { "cantidad": "1", "concepto": "Tomate Frito Brick", "importePorUnidad": "1,35", "importeTotal": "1,35" },
+      { "cantidad": "1", "concepto": "Agua Mineral", "importePorUnidad": "0,80", "importeTotal": "0,80" },
+      { "cantidad": "4", "concepto": "Leche Desn", "importePorUnidad": "0,79", "importeTotal": "3,16" },
+      { "cantidad": "4", "concepto": "Cola Zero Zero 2L", "importePorUnidad": "0,75", "importeTotal": "3,00" }
     ],
-    "total_ticket": "6,00"
+    "totalTicket": "20,31"
   }
 }

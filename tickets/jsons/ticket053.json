@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Pipa Gigante Sal", "importePorUnidad": "1,20", "importeTotal": "1,20" },
+      { "cantidad": "3", "concepto": "Pastel Crema 65%", "importePorUnidad": "0,40", "importeTotal": "1,20" }
+    ],
+    "totalTicket": "2,40"
   }
 }

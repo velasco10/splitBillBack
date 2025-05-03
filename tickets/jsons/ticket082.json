@@ -1,6 +1,17 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Filete Pechuga", "importePorUnidad": "4,06", "importeTotal": "4,06" },
+      { "cantidad": "1", "concepto": "Iceberg 250 Gr", "importePorUnidad": "0,86", "importeTotal": "0,86" },
+      { "cantidad": "1", "concepto": "Popitos", "importePorUnidad": "1,50", "importeTotal": "1,50" },
+      { "cantidad": "1", "concepto": "Gelly 0% Dulces", "importePorUnidad": "1,00", "importeTotal": "1,00" },
+      { "cantidad": "1", "concepto": "Jamon Pavo Finas Lon", "importePorUnidad": "1,66", "importeTotal": "1,66" },
+      { "cantidad": "2", "concepto": "Leche Desn", "importePorUnidad": "0,80", "importeTotal": "1,60" },
+      { "cantidad": "1", "concepto": "Cerveza", "importePorUnidad": "1,77", "importeTotal": "1,77" },
+      { "cantidad": "2", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "1,40" },
+      { "cantidad": "1", "concepto": "Pepino (0,274kg 1,65€/kg)", "importePorUnidad": "1,65", "importeTotal": "0,45" }
+    ],
+    "totalTicket": "14,30"
   }
 }

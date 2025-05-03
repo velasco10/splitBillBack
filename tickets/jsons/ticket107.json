@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "ECC Comics - X-Madrid",
+    "items": [
+      { "cantidad": "1", "concepto": "Hades On Throne Villains", "importePorUnidad": "39,95", "importeTotal": "39,95" },
+      { "cantidad": "1", "concepto": "Time Wizard Yu-Gi-Oh! Po", "importePorUnidad": "16,00", "importeTotal": "16,00" }
+    ],
+    "totalTicket": "55,95"
   }
 }

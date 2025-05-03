@@ -1,6 +1,9 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "4", "concepto": "Agua Mineral", "importePorUnidad": "0,73", "importeTotal": "2,92" }
+    ],
+    "totalTicket": "2,92"
   }
 }

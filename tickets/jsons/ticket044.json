@@ -1,6 +1,11 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Bolsa plástico", "importePorUnidad": "0,15", "importeTotal": "0,15" },
+      { "cantidad": "1", "concepto": "Surtido croissants", "importePorUnidad": "2,55", "importeTotal": "2,55" },
+      { "cantidad": "4", "concepto": "Pastel crema 65%", "importePorUnidad": "0,40", "importeTotal": "1,60" }
+    ],
+    "totalTicket": "4,30"
   }
 }

@@ -1,6 +1,14 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Agua mineral", "importePorUnidad": "0,80", "importeTotal": "0,80" },
+      { "cantidad": "1", "concepto": "Cola Zero Zero 2L", "importePorUnidad": "0,75", "importeTotal": "0,75" },
+      { "cantidad": "1", "concepto": "T. 100% Integrales", "importePorUnidad": "1,65", "importeTotal": "1,65" },
+      { "cantidad": "1", "concepto": "Zumo fresco 1L", "importePorUnidad": "4,55", "importeTotal": "4,55" },
+      { "cantidad": "1", "concepto": "Infusión jengibre", "importePorUnidad": "1,35", "importeTotal": "1,35" },
+      { "cantidad": "1", "concepto": "Quema grasas", "importePorUnidad": "1,05", "importeTotal": "1,05" }
+    ],
+    "totalTicket": "10,10"
   }
 }

@@ -1,6 +1,56 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      {
+        "cantidad": "1",
+        "concepto": "Filete Merluza Cabo",
+        "importePorUnidad": "5,10",
+        "importeTotal": "5,10"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Solomillo Cerdo",
+        "importePorUnidad": "3,86",
+        "importeTotal": "3,86"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Solomillo Cerdo",
+        "importePorUnidad": "4,00",
+        "importeTotal": "4,00"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Chuleta Lomo",
+        "importePorUnidad": "3,00",
+        "importeTotal": "3,00"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Filete Lomo Fam",
+        "importePorUnidad": "5,81",
+        "importeTotal": "5,81"
+      },
+      {
+        "cantidad": "2",
+        "concepto": "Burger Vacuno Cerdo",
+        "importePorUnidad": "3,78",
+        "importeTotal": "7,56"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Filete Pechuga",
+        "importePorUnidad": "3,86",
+        "importeTotal": "3,86"
+      },
+      {
+        "cantidad": "1",
+        "concepto": "Filete Pechuga",
+        "importePorUnidad": "3,97",
+        "importeTotal": "3,97"
+      }
+    ],
+    "totalTicket": "42,34"
   }
 }

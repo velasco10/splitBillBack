@@ -1,6 +1,10 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "200 Servil. Blancas", "importePorUnidad": "1,25", "importeTotal": "1,25" },
+      { "cantidad": "1", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "0,70" }
+    ],
+    "totalTicket": "1,95"
   }
 }

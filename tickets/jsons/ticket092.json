@@ -1,6 +1,11 @@
 {
   "gt_parse": {
-    "items": [],
-    "total_ticket": ""
+    "nombre": "Mercadona",
+    "items": [
+      { "cantidad": "1", "concepto": "Cola Zero 2L", "importePorUnidad": "0,70", "importeTotal": "0,70" },
+      { "cantidad": "1", "concepto": "Kiwi Verde (0,186kg 4,40€/kg)", "importePorUnidad": "4,40", "importeTotal": "0,83" },
+      { "cantidad": "1", "concepto": "Patata (0,286kg 1,99€/kg)", "importePorUnidad": "1,99", "importeTotal": "0,57" }
+    ],
+    "totalTicket": "2,10"
   }
 }
