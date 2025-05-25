@@ -1,0 +1,13 @@
+{
+  "gt_parse": {
+    "nombre": "La Plaza de Quevedo",
+    "items": [
+      { "cantidad": "2", "concepto": "Coca Cola Zero", "importePorUnidad": "3,70", "importeTotal": "7,40" },
+      { "cantidad": "1", "concepto": "Coca Cola", "importePorUnidad": "3,70", "importeTotal": "3,70" },
+      { "cantidad": "1", "concepto": "Doble Victoria Barr", "importePorUnidad": "3,80", "importeTotal": "3,80" },
+      { "cantidad": "2", "concepto": "Pincho de Tortilla", "importePorUnidad": "4,70", "importeTotal": "9,40" },
+      { "cantidad": "2", "concepto": "Mollete Jamon 2024", "importePorUnidad": "5,90", "importeTotal": "11,80" }
+    ],
+    "totalTicket": "36,10"
+  }
+}

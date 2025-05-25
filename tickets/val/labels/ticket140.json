@@ -1,0 +1,15 @@
+{
+    "gt_parse": {
+      "nombre": "Amazon",
+      "items": [
+        {
+          "cantidad": "1",
+          "concepto": "Escobilla limpiaparabrisas Bosch Rear H281, Longitud: 280mm",
+          "importePorUnidad": "8,68",
+          "importeTotal": "8,68"
+        }
+      ],
+      "totalTicket": "10,50"
+    }
+  }
+  

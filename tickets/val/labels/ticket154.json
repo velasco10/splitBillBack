@@ -1,0 +1,23 @@
+{
+    "gt_parse": {
+      "nombre": "Merendero de Covadonga",
+      "items": [
+        { "cantidad": "5", "concepto": "Pepsi Zero 350", "importePorUnidad": "4,00", "importeTotal": "20,00" },
+        { "cantidad": "3", "concepto": "Pepsi 350", "importePorUnidad": "4,00", "importeTotal": "12,00" },
+        { "cantidad": "1", "concepto": "Agua Grande", "importePorUnidad": "3,00", "importeTotal": "3,00" },
+        { "cantidad": "1", "concepto": "Alhambra", "importePorUnidad": "3,50", "importeTotal": "3,50" },
+        { "cantidad": "1", "concepto": "Chorizo Sidra Dulc", "importePorUnidad": "7,50", "importeTotal": "7,50" },
+        { "cantidad": "1", "concepto": "Variado de Quesos", "importePorUnidad": "18,50", "importeTotal": "18,50" },
+        { "cantidad": "1", "concepto": "Chuleton de Vacuno", "importePorUnidad": "48,00", "importeTotal": "48,00" },
+        { "cantidad": "1", "concepto": "Cachopo Montaña de", "importePorUnidad": "28,00", "importeTotal": "28,00" },
+        { "cantidad": "2", "concepto": "Cesta de Pan", "importePorUnidad": "2,50", "importeTotal": "5,00" },
+        { "cantidad": "2", "concepto": "Arroz Leche Canela", "importePorUnidad": "4,50", "importeTotal": "9,00" },
+        { "cantidad": "2", "concepto": "Arroz Leche Requem", "importePorUnidad": "4,50", "importeTotal": "9,00" },
+        { "cantidad": "1", "concepto": "Tiramisú", "importePorUnidad": "4,50", "importeTotal": "4,50" },
+        { "cantidad": "1", "concepto": "Tocinillo de Cielo", "importePorUnidad": "4,50", "importeTotal": "4,50" },
+        { "cantidad": "2", "concepto": "Café Leche", "importePorUnidad": "1,80", "importeTotal": "3,60" }
+      ],
+      "totalTicket": "176,10"
+    }
+  }
+  

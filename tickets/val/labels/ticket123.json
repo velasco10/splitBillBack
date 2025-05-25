@@ -1,0 +1,12 @@
+{
+  "gt_parse": {
+    "nombre": "Pecris Cafetería S.L.",
+    "items": [
+      { "cantidad": "1", "concepto": "Red Bull", "importePorUnidad": "4,50", "importeTotal": "4,50" },
+      { "cantidad": "1", "concepto": "Red Bull", "importePorUnidad": "4,50", "importeTotal": "4,50" },
+      { "cantidad": "1", "concepto": "Perrito completo", "importePorUnidad": "8,00", "importeTotal": "8,00" },
+      { "cantidad": "1", "concepto": "Sandwich curry", "importePorUnidad": "5,00", "importeTotal": "5,00" }
+    ],
+    "totalTicket": "22,00"
+  }
+}

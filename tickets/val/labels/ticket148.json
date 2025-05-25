@@ -1,0 +1,11 @@
+{
+    "gt_parse": {
+      "nombre": "AEROP. ADOLFO SUÁREZ MADRID-BARAJAS",
+      "items": [
+        { "cantidad": "1", "concepto": "Menú Brunch Boc. Ibérico", "importePorUnidad": "15,95", "importeTotal": "15,95" },
+        { "cantidad": "1", "concepto": "Desayuno Clásico Aer", "importePorUnidad": "8,95", "importeTotal": "8,95" }
+      ],
+      "totalTicket": "24,90"
+    }
+  }
+  

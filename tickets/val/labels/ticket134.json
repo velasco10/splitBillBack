@@ -1,0 +1,10 @@
+{
+  "gt_parse": {
+    "nombre": "Amelia Global Food S.L.",
+    "items": [
+      { "cantidad": "1", "concepto": "Cortado", "importePorUnidad": "4,50", "importeTotal": "4,50" },
+      { "cantidad": "1", "concepto": "Acqua Panna", "importePorUnidad": "5,00", "importeTotal": "5,00" }
+    ],
+    "totalTicket": "9,50"
+  }
+}

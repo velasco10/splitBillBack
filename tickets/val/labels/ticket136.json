@@ -1,0 +1,15 @@
+{
+  "gt_parse": {
+    "nombre": "CBAPD213980",
+    "items": [
+      { "cantidad": "1", "concepto": "Tasa Envases DLV/TA", "importePorUnidad": "0,01", "importeTotal": "0,01" },
+      { "cantidad": "1", "concepto": "Tasa Envases DLV/TA", "importePorUnidad": "0,01", "importeTotal": "0,01" },
+      { "cantidad": "1", "concepto": "Pulled Pork", "importePorUnidad": "15,95", "importeTotal": "15,95" },
+      { "cantidad": "1", "concepto": "BCB Burger", "importePorUnidad": "15,95", "importeTotal": "15,95" },
+      { "cantidad": "1", "concepto": "Bacon Cheese Fries", "importePorUnidad": "12,95", "importeTotal": "12,95" },
+      { "cantidad": "1", "concepto": "Gasto Envio", "importePorUnidad": "3,00", "importeTotal": "3,00" },
+      { "cantidad": "1", "concepto": "Descuento Club-by", "importePorUnidad": "-12,95", "importeTotal": "-12,95" }
+    ],
+    "totalTicket": "34,92"
+  }
+}

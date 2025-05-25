@@ -1,0 +1,15 @@
+{
+    "gt_parse": {
+      "nombre": "El Alfoz de Burgos",
+      "items": [
+        {
+          "cantidad": "5",
+          "concepto": "Menu diario",
+          "importePorUnidad": "17,00",
+          "importeTotal": "85,00"
+        }
+      ],
+      "totalTicket": "85,00"
+    }
+  }
+  

@@ -1,0 +1,9 @@
+{
+  "gt_parse": {
+    "nombre": "Lidl",
+    "items": [
+      { "cantidad": "1", "concepto": "Compra supermercado", "importePorUnidad": "9,99", "importeTotal": "9,99" }
+    ],
+    "totalTicket": "9,99"
+  }
+}

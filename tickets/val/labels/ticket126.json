@@ -1,0 +1,16 @@
+{
+  "gt_parse": {
+    "nombre": "Supermercado Dia",
+    "items": [
+      { "cantidad": "1", "concepto": "ARROZ VAPORIZADO", "importePorUnidad": "1,67", "importeTotal": "1,67" },
+      { "cantidad": "1", "concepto": "BOLSA UTILIZABLE", "importePorUnidad": "0,15", "importeTotal": "0,15" },
+      { "cantidad": "1", "concepto": "MANZANA GOLDEN", "importePorUnidad": "2,03", "importeTotal": "2,03" },
+      { "cantidad": "1", "concepto": "PLATANO", "importePorUnidad": "0,93", "importeTotal": "0,93" },
+      { "cantidad": "1", "concepto": "BEB. ENER MONSTER", "importePorUnidad": "1,45", "importeTotal": "1,45" },
+      { "cantidad": "1", "concepto": "SALSA BBQ DIA", "importePorUnidad": "3,99", "importeTotal": "3,99" },
+      { "cantidad": "1", "concepto": "BEB. ENER RED PRE", "importePorUnidad": "0,94", "importeTotal": "0,94" },
+      { "cantidad": "1", "concepto": "PAÑ HIGIENIC LEC", "importePorUnidad": "5,29", "importeTotal": "5,29" }
+    ],
+    "totalTicket": "17,90"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "gt_parse": {
+      "nombre": "Carrefour",
+      "items": [
+        { "cantidad": "1", "concepto": "Monster Ultra Peachy", "importePorUnidad": "1,79", "importeTotal": "1,79" },
+        { "cantidad": "1", "concepto": "Desodorante William", "importePorUnidad": "2,55", "importeTotal": "2,55" },
+        { "cantidad": "1", "concepto": "Caramelos Skittles", "importePorUnidad": "3,39", "importeTotal": "3,39" },
+        { "cantidad": "1", "concepto": "Cocktail Villanas", "importePorUnidad": "1,29", "importeTotal": "1,29" },
+        { "cantidad": "1", "concepto": "Turron Huesitos", "importePorUnidad": "2,95", "importeTotal": "2,95" },
+        { "cantidad": "1", "concepto": "Bolsa 48x60cm", "importePorUnidad": "0,15", "importeTotal": "0,15" },
+        { "cantidad": "1", "concepto": "Ambientador Botella", "importePorUnidad": "2,59", "importeTotal": "2,59" },
+        { "cantidad": "1", "concepto": "Escobilla B25 290MM", "importePorUnidad": "9,99", "importeTotal": "9,99" }
+      ],
+      "totalTicket": "24,70"
+    }
+  }
+  

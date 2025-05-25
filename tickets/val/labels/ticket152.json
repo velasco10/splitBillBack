@@ -1,0 +1,18 @@
+{
+    "gt_parse": {
+      "nombre": "As de Guía",
+      "items": [
+        { "cantidad": "4", "concepto": "Coca Cola Zero", "importePorUnidad": "2,50", "importeTotal": "10,00" },
+        { "cantidad": "2", "concepto": "Coca Cola", "importePorUnidad": "2,50", "importeTotal": "5,00" },
+        { "cantidad": "1", "concepto": "Agua Grande", "importePorUnidad": "3,50", "importeTotal": "3,50" },
+        { "cantidad": "1", "concepto": "Sidra", "importePorUnidad": "4,00", "importeTotal": "4,00" },
+        { "cantidad": "1", "concepto": "Croquetas", "importePorUnidad": "11,50", "importeTotal": "11,50" },
+        { "cantidad": "1", "concepto": "Tacos Lomo Saltead", "importePorUnidad": "17,90", "importeTotal": "17,90" },
+        { "cantidad": "1", "concepto": "Fingers de Pollo", "importePorUnidad": "17,50", "importeTotal": "17,50" },
+        { "cantidad": "1", "concepto": "Tabla Picadillo As", "importePorUnidad": "16,90", "importeTotal": "16,90" },
+        { "cantidad": "1", "concepto": "Sopa Marisco", "importePorUnidad": "15,50", "importeTotal": "15,50" }
+      ],
+      "totalTicket": "101,80"
+    }
+  }
+  

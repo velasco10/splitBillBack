@@ -1,0 +1,9 @@
+{
+  "gt_parse": {
+    "nombre": "microATM",
+    "items": [
+      { "cantidad": "6", "concepto": "Ficha", "importePorUnidad": "2,00", "importeTotal": "12,00" }
+    ],
+    "totalTicket": "12,00"
+  }
+}

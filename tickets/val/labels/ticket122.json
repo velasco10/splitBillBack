@@ -1,0 +1,13 @@
+{
+  "gt_parse": {
+    "nombre": "Mikasa",
+    "items": [
+      { "cantidad": "6", "concepto": "Polea de tendedero HRO1", "importePorUnidad": "2,95", "importeTotal": "17,70" },
+      { "cantidad": "1", "concepto": "Cuerda trenzada 4mm*30m", "importePorUnidad": "2,95", "importeTotal": "2,95" },
+      { "cantidad": "2", "concepto": "Rollo antideslizante", "importePorUnidad": "2,95", "importeTotal": "7,90" },
+      { "cantidad": "1", "concepto": "Rollo antideslizante", "importePorUnidad": "2,95", "importeTotal": "2,95" },
+      { "cantidad": "1", "concepto": "Botella 500ml S212 Cuel", "importePorUnidad": "1,35", "importeTotal": "1,35" }
+    ],
+    "totalTicket": "8,45"
+  }
+}

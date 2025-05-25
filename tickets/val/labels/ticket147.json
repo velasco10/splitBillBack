@@ -1,0 +1,11 @@
+{
+    "gt_parse": {
+      "nombre": "GATTOS Centro Clínico Felino",
+      "items": [
+        { "cantidad": "1", "concepto": "Valoración Veterinaria", "importePorUnidad": "21,30", "importeTotal": "21,30" },
+        { "cantidad": "1", "concepto": "Valoración Veterinaria", "importePorUnidad": "42,50", "importeTotal": "42,50" }
+      ],
+      "totalTicket": "63,80"
+    }
+  }
+  

@@ -1,0 +1,10 @@
+{
+  "gt_parse": {
+    "nombre": "IBZ Solsun S.L.",
+    "items": [
+      { "cantidad": "2", "concepto": "Coca Cola", "importePorUnidad": "13,00", "importeTotal": "26,00" },
+      { "cantidad": "2", "concepto": "Sprite", "importePorUnidad": "13,00", "importeTotal": "26,00" }
+    ],
+    "totalTicket": "52,00"
+  }
+}
