@@ -8,9 +8,8 @@ import re, json
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-genai.configure(api_key=GEMINI_API_KEY)
-
 def extraer_ticket_con_gemini(image_bytes: bytes) -> dict:
+    genai.configure(api_key=GEMINI_API_KEY)
     model = genai.GenerativeModel("gemini-1.5-flash")
     prompt = """
     Eres un extractor de tickets. Devuelve los datos en este formato JSON:

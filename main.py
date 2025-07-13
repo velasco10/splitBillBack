@@ -1,7 +1,4 @@
 import os
-import easyocr
-import io
-
 from fastapi import FastAPI
 from fastapi import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,12 +9,17 @@ from fastapi import UploadFile, File
 from PIL import Image
 import numpy as np
 import re    
-
+from utils_gemini import extraer_ticket_con_gemini
+import base64
+from pydantic import BaseModel
 
 
 app = FastAPI()
 
-reader = easyocr.Reader(['es']) 
+class ImagenData(BaseModel):
+    base64: str
+    mimetype: str = "image/jpeg"
+
 
 # CORS para permitir peticiones desde tu frontend
 app.add_middleware(
@@ -154,117 +156,11 @@ async def eliminar_gasto(id: str):
         raise HTTPException(status_code=404, detail="Gasto no encontrado")
     return {"msg": "Gasto eliminado"}
 
-@app.post("/ocr")
-async def procesar_ticket(file: UploadFile = File(...)):
+@app.post("/procesar_ticket/")
+async def procesar_ticket(imagen: ImagenData):
     try:
-        contents = await file.read()
-        image = Image.open(io.BytesIO(contents))
-        image_array = np.array(image)
-
-        # OCR con coordenadas
-        resultados = reader.readtext(image_array, detail=1)
-
-        # Extraer texto + coordenadas verticales (Y)
-        lineas_ocr = []
-        for bbox, texto, _ in resultados:
-            y = int(bbox[0][1])  # coordenada Y de la esquina superior izquierda
-            lineas_ocr.append({
-                "texto": texto,
-                "y": y
-            })
-
-        # Ordenar de arriba hacia abajo
-        lineas_ocr.sort(key=lambda x: x["y"])
-
-        return {
-            "lineas_ocr": lineas_ocr
-        }
-
+        image_bytes = base64.b64decode(imagen.base64)
+        resultado = extraer_ticket_con_gemini(image_bytes)
+        return resultado
     except Exception as e:
-        print("❌ ERROR OCR:", e)
-        raise HTTPException(status_code=500, detail=f"Error en OCR: {str(e)}")
-
-from fastapi import Request
-
-@app.post("/interpretar")
-async def interpretar_ticket(request: Request):
-    try:
-        datos = await request.json()
-        lineas = datos.get("lineas_ocr", [])
-
-        # --- Paso 1: Ordenar líneas por coordenada Y ---
-        lineas.sort(key=lambda l: l["y"])
-
-        # --- Paso 2: Buscar índice de la cabecera y final de tabla ---
-        indice_inicio = None
-        indice_fin = None
-
-        for i, linea in enumerate(lineas):
-            texto = linea["texto"].lower()
-
-            if any(pal in texto for pal in ["descr", "und", "pvp", "precio"]):
-                indice_inicio = i
-            if any(pal in texto for pal in ["pagar", "total"]):
-                indice_fin = i
-                break
-
-        if indice_inicio is None or indice_fin is None:
-            raise HTTPException(status_code=422, detail="No se encontró tabla reconocible")
-
-        # --- Paso 3: Extraer y limpiar cabecera ---
-        cabecera_texto = lineas[indice_inicio]["texto"].lower()
-        posibles_claves = {
-            "descr": "descripcion",
-            "und": "cantidad",
-            "x": "cantidad",
-            "pvp": "precio_unitario",
-            "precio": "precio_total"
-        }
-
-        claves = []
-        for palabra in cabecera_texto.split():
-            for key in posibles_claves:
-                if key in palabra:
-                    claves.append(posibles_claves[key])
-                    break
-
-        # --- Paso 4: Recorrer filas y asignar valores ---
-        items = []
-        for linea in lineas[indice_inicio+1:indice_fin]:
-            valores = linea["texto"].replace(",", ".").split()
-            if len(valores) != len(claves):
-                continue  # salto si la fila no coincide con la cabecera
-
-            item = {}
-            for idx, clave in enumerate(claves):
-                valor = valores[idx]
-                if clave in ["precio_unitario", "precio_total"]:
-                    try:
-                        item[clave] = float(valor)
-                    except:
-                        item[clave] = None
-                elif clave == "cantidad":
-                    item[clave] = int(valor.replace("x", ""))
-                else:
-                    item[clave] = valor
-
-            items.append(item)
-
-        # --- Paso 5: Detectar total de ticket ---
-        total_detectado = None
-        for linea in lineas[indice_fin:]:
-            if "pagar" in linea["texto"].lower():
-                match = re.search(r"\d+[\.,]?\d*", linea["texto"])
-                if match:
-                    total_detectado = float(match.group().replace(",", "."))
-                    break
-
-        return {
-            "items": items,
-            "items_detectados": len(items),
-            "total_detectado": total_detectado
-        }
-
-    except Exception as e:
-        print("❌ ERROR INTERPRETAR:", e)
-        raise HTTPException(status_code=500, detail=f"Error interpretando OCR: {str(e)}")
+        raise HTTPException(status_code=400, detail=f"Error procesando imagen: {str(e)}")
