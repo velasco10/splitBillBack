@@ -20,6 +20,8 @@ class ImagenData(BaseModel):
     base64: str
     mimetype: str = "image/jpeg"
 
+class GrupoIdsRequest(BaseModel):
+    ids: list[str]
 
 # CORS para permitir peticiones desde tu frontend
 app.add_middleware(
@@ -79,6 +81,7 @@ async def eliminar_usuario(id: str):
 
 @app.post("/grupos")
 async def crear_grupo(request: Request):
+    print("Entra en la ceacion", request.json)
     data = await request.json()
     result = await db["grupos"].insert_one(data)
     data["_id"] = str(result.inserted_id)
@@ -164,3 +167,25 @@ async def procesar_ticket(imagen: ImagenData):
         return resultado
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Error procesando imagen: {str(e)}")
+
+@app.get("/grupos/creador/{creador_id}")
+async def obtener_grupos_por_creador(creador_id: str):
+    grupos = []
+    cursor = db["grupos"].find({"creadorId": creador_id})
+    async for doc in cursor:
+        doc["_id"] = str(doc["_id"])
+        grupos.append(doc)
+    return grupos
+
+@app.post("/grupos/varios")
+async def obtener_grupos_por_ids(request: GrupoIdsRequest):
+    try:
+        object_ids = [ObjectId(id) for id in request.ids]
+        grupos = []
+        cursor = db["grupos"].find({"_id": {"$in": object_ids}})
+        async for doc in cursor:
+            doc["_id"] = str(doc["_id"])
+            grupos.append(doc)
+        return grupos
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error buscando grupos: {str(e)}")
