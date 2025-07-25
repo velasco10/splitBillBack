@@ -5,14 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from fastapi import Request
 from bson import ObjectId
-from fastapi import UploadFile, File
-from PIL import Image
-import numpy as np
-import re    
 from utils_gemini import extraer_ticket_con_gemini
 import base64
 from pydantic import BaseModel
-
+from dotenv import load_dotenv
 
 app = FastAPI()
 
@@ -32,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
+MONGO_URL = os.getenv("MONGO_URL")
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["splitbill_db"]
 
