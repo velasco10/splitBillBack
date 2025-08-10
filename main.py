@@ -12,6 +12,9 @@ from dotenv import load_dotenv
 
 app = FastAPI()
 
+class BeneficiarioIn(BaseModel):
+    beneficiario: str
+
 class ImagenData(BaseModel):
     base64: str
     mimetype: str = "image/jpeg"
@@ -94,9 +97,11 @@ async def obtener_grupos():
 
 @app.get("/grupos/{id}")
 async def obtener_grupo(id: str):
+    if not ObjectId.is_valid(id):
+        raise HTTPException(status_code=400, detail="id inválido")
     grupo = await db["grupos"].find_one({"_id": ObjectId(id)})
     if not grupo:
-        raise HTTPException(status_code=404, detail="Grupo no encontrado")
+        raise HTTPException(status_code=404, detail="no encontrado")
     grupo["_id"] = str(grupo["_id"])
     return grupo
 
@@ -185,3 +190,12 @@ async def obtener_grupos_por_ids(request: GrupoIdsRequest):
         return grupos
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Error buscando grupos: {str(e)}")
+    
+@app.put("/gastos/grupo/{grupo_id}/agregar_beneficiario")
+async def agregar_beneficiario(grupo_id: str, body: BeneficiarioIn):
+    # Añade el beneficiario a TODOS los gastos del grupo (sin duplicados)
+    res = await db["gastos"].update_many(
+        {"grupoId": grupo_id},                      # <-- si guardas grupoId como ObjectId
+        {"$addToSet": {"beneficiarios": body.beneficiario}}
+    )
+    return {"matched": res.matched_count, "modified": res.modified_count}
