@@ -1,0 +1,15 @@
+# Directorios y archivos que no deben ser subidos
+node_modules/
+dist/
+.env
+.next/
+.git/
+
+# Archivos de caché y de prueba
+.cache/
+.jest/
+test/
+
+# Otros archivos
+*.log
+npm-debug.log*
