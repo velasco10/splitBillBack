@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Caldo Carne 12 Pas", "importePorUnidad": "0,85", "importeTotal": "0,85" }
-    ],
-    "totalTicket": "0,85"
-  }
-}

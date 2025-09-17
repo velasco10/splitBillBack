@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Vinagre Limpieza", "importePorUnidad": "0,90", "importeTotal": "0,90" }
-    ],
-    "totalTicket": "0,90"
-  }
-}

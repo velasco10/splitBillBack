@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Pat. Classicas", "importePorUnidad": "1,80", "importeTotal": "1,80" }
-    ],
-    "totalTicket": "1,80"
-  }
-}

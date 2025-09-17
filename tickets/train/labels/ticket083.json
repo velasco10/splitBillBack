@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Det Liq Marsella", "importePorUnidad": "3,30", "importeTotal": "3,30" }
-    ],
-    "totalTicket": "3,30"
-  }
-}

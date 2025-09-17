@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "3", "concepto": "Almeja Pacific", "importePorUnidad": "1,70", "importeTotal": "5,10" }
-    ],
-    "totalTicket": "5,10"
-  }
-}

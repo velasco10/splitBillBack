@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Arroz Redondo", "importePorUnidad": "1,27", "importeTotal": "1,27" }
-    ],
-    "totalTicket": "1,27"
-  }
-}

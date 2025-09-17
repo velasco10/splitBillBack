@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Tiramisu", "importePorUnidad": "9,50", "importeTotal": "9,50" }
-    ],
-    "totalTicket": "9,50"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Banana (1,054kg 1,40€/kg)", "importePorUnidad": "1,40", "importeTotal": "1,48" }
-    ],
-    "totalTicket": "1,48"
-  }
-}

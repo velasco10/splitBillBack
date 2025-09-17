@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Chía", "importePorUnidad": "1,33", "importeTotal": "1,33" }
-    ],
-    "totalTicket": "1,33"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Agua mineral", "importePorUnidad": "0,80", "importeTotal": "0,80" }
-    ],
-    "totalTicket": "0,80"
-  }
-}

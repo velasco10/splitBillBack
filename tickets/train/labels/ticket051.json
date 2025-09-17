@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Mercadona",
-    "items": [
-      { "cantidad": "1", "concepto": "Spray Ropa Limpia", "importePorUnidad": "1,15", "importeTotal": "1,15" }
-    ],
-    "totalTicket": "1,15"
-  }
-}

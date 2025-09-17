@@ -1,9 +1,0 @@
-{
-  "gt_parse": {
-    "nombre": "Hotel Reina del Sol Uno",
-    "items": [
-      { "cantidad": "1", "concepto": "Desperados", "importePorUnidad": "3,80", "importeTotal": "3,80" }
-    ],
-    "totalTicket": "3,80"
-  }
-}
