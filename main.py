@@ -1,6 +1,7 @@
 import os, sys, traceback
 from fastapi import FastAPI
 from fastapi import HTTPException
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from fastapi import Request
@@ -35,6 +36,10 @@ app.add_middleware(
 MONGO_URL = os.getenv("MONGO_URL")
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["splitbill_db"]
+
+@app.options("/{path:path}")
+async def cors_preflight(path: str):
+    return JSONResponse(status_code=200, content={})
 
 @app.middleware("http")
 async def _log_errors(request: Request, call_next):
