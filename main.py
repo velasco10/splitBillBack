@@ -1,4 +1,4 @@
-import os
+import os, sys, traceback
 from fastapi import FastAPI
 from fastapi import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -34,6 +34,14 @@ app.add_middleware(
 MONGO_URL = os.getenv("MONGO_URL")
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["splitbill_db"]
+
+@app.middleware("http")
+async def _log_errors(request: Request, call_next):
+    try:
+        return await call_next(request)
+    except Exception:
+        traceback.print_exc(file=sys.stderr)
+        raise
 
 @app.get("/")
 async def root():
