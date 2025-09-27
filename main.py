@@ -26,7 +26,7 @@ class GrupoIdsRequest(BaseModel):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Cambia esto por el dominio de tu app en producción
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -88,7 +88,7 @@ async def eliminar_usuario(id: str):
 
 @app.post("/grupos")
 async def crear_grupo(request: Request):
-    print("Entra en la ceacion", request.json)
+    print("Entra en la creacion", request.json)
     data = await request.json()
     result = await db["grupos"].insert_one(data)
     data["_id"] = str(result.inserted_id)
