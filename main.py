@@ -9,6 +9,7 @@ from utils_gemini import extraer_ticket_con_gemini
 import base64
 from pydantic import BaseModel
 from dotenv import load_dotenv
+from bson.errors import InvalidId
 
 app = FastAPI()
 
@@ -105,13 +106,24 @@ async def obtener_grupos():
 
 @app.get("/grupos/{id}")
 async def obtener_grupo(id: str):
-    if not ObjectId.is_valid(id):
+    try:
+        # 1) Validar id y probar como ObjectId
+        oid = ObjectId(id)
+    except InvalidId:
+        # Si no es ObjectId válido, probamos si en tu colección el _id es STRING
+        doc = await db["grupos"].find_one({"_id": id})
+        if doc:
+            doc["_id"] = str(doc["_id"])
+            return doc
         raise HTTPException(status_code=400, detail="id inválido")
-    grupo = await db["grupos"].find_one({"_id": ObjectId(id)})
-    if not grupo:
+
+    # 2) Buscar por ObjectId y, si no existe, intentar por string (por si hay mezcla en la colección)
+    doc = await db["grupos"].find_one({"_id": oid}) or await db["grupos"].find_one({"_id": id})
+    if not doc:
         raise HTTPException(status_code=404, detail="no encontrado")
-    grupo["_id"] = str(grupo["_id"])
-    return grupo
+
+    doc["_id"] = str(doc["_id"])
+    return doc
 
 @app.put("/grupos/{id}")
 async def actualizar_grupo(id: str, request: Request):
