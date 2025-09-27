@@ -11,6 +11,8 @@ import base64
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from bson.errors import InvalidId
+from fastapi import Depends
+from motor.motor_asyncio import AsyncIOMotorClient
 
 app = FastAPI()
 
@@ -34,8 +36,14 @@ app.add_middleware(
 )
 
 MONGO_URL = os.getenv("MONGO_URL")
-client = AsyncIOMotorClient(MONGO_URL)
-db = client["splitbill_db"]
+
+async def get_db():
+    client = AsyncIOMotorClient(MONGO_URL)
+    try:
+        yield client["splitbill_db"]
+    finally:
+        client.close()  # imprescindible en Vercel
+
 
 @app.options("/{path:path}")
 async def cors_preflight(path: str):
@@ -93,7 +101,7 @@ async def eliminar_usuario(id: str):
     return {"msg": "Usuario eliminado"}
 
 @app.post("/grupos")
-async def crear_grupo(request: Request):
+async def crear_grupo(request: Request, db = Depends(get_db)):
     print("Entra en la creacion", request.json)
     data = await request.json()
     result = await db["grupos"].insert_one(data)
@@ -101,7 +109,7 @@ async def crear_grupo(request: Request):
     return data
 
 @app.get("/grupos")
-async def obtener_grupos():
+async def obtener_grupos(db = Depends(get_db)):
     grupos = []
     cursor = db["grupos"].find()
     async for doc in cursor:
@@ -110,7 +118,7 @@ async def obtener_grupos():
     return grupos
 
 @app.get("/grupos/{id}")
-async def obtener_grupo(id: str):
+async def obtener_grupo(id: str, db = Depends(get_db)):
     try:
         oid = ObjectId(id)
         doc = await db["grupos"].find_one({"_id": oid})
@@ -139,14 +147,14 @@ async def eliminar_grupo(id: str):
     return {"msg": "Grupo eliminado"}
 
 @app.post("/gastos")
-async def agregar_gasto(request: Request):
+async def agregar_gasto(request: Request, db = Depends(get_db)):
     data = await request.json()
     result = await db["gastos"].insert_one(data)
     data["_id"] = str(result.inserted_id)
     return data
 
 @app.get("/gastos")
-async def obtener_gastos():
+async def obtener_gastos(db = Depends(get_db)):
     gastos = []
     cursor = db["gastos"].find()
     async for doc in cursor:
@@ -155,7 +163,7 @@ async def obtener_gastos():
     return gastos
 
 @app.get("/gastos/grupo/{grupo_id}")
-async def obtener_gastos_por_grupo(grupo_id: str):
+async def obtener_gastos_por_grupo(grupo_id: str, db = Depends(get_db)):
     gastos = []
     cursor = db["gastos"].find({"grupoId": grupo_id})
     async for doc in cursor:
@@ -164,7 +172,7 @@ async def obtener_gastos_por_grupo(grupo_id: str):
     return gastos
 
 @app.put("/gastos/{id}")
-async def actualizar_gasto(id: str, request: Request):
+async def actualizar_gasto(id: str, request: Request, db = Depends(get_db)):
     data = await request.json()
     result = await db["gastos"].update_one({"_id": ObjectId(id)}, {"$set": data})
     if result.matched_count == 0:
@@ -172,14 +180,14 @@ async def actualizar_gasto(id: str, request: Request):
     return {"msg": "Gasto actualizado"}
 
 @app.delete("/gastos/{id}")
-async def eliminar_gasto(id: str):
+async def eliminar_gasto(id: str, db = Depends(get_db)):
     result = await db["gastos"].delete_one({"_id": ObjectId(id)})
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Gasto no encontrado")
     return {"msg": "Gasto eliminado"}
 
 @app.post("/procesar_ticket/")
-async def procesar_ticket(imagen: ImagenData):
+async def procesar_ticket(imagen: ImagenData, db = Depends(get_db)):
     try:
         image_bytes = base64.b64decode(imagen.base64)
         resultado = extraer_ticket_con_gemini(image_bytes)
@@ -188,7 +196,7 @@ async def procesar_ticket(imagen: ImagenData):
         raise HTTPException(status_code=400, detail=f"Error procesando imagen: {str(e)}")
 
 @app.get("/grupos/creador/{creador_id}")
-async def obtener_grupos_por_creador(creador_id: str):
+async def obtener_grupos_por_creador(creador_id: str, db = Depends(get_db)):
     grupos = []
     cursor = db["grupos"].find({"creadorId": creador_id})
     async for doc in cursor:
@@ -197,7 +205,7 @@ async def obtener_grupos_por_creador(creador_id: str):
     return grupos
 
 @app.post("/grupos/varios")
-async def obtener_grupos_por_ids(request: GrupoIdsRequest):
+async def obtener_grupos_por_ids(request: GrupoIdsRequest, db = Depends(get_db)):
     try:
         object_ids = [ObjectId(id) for id in request.ids]
         grupos = []
@@ -210,7 +218,7 @@ async def obtener_grupos_por_ids(request: GrupoIdsRequest):
         raise HTTPException(status_code=400, detail=f"Error buscando grupos: {str(e)}")
     
 @app.put("/gastos/grupo/{grupo_id}/agregar_beneficiario")
-async def agregar_beneficiario(grupo_id: str, body: BeneficiarioIn):
+async def agregar_beneficiario(grupo_id: str, body: BeneficiarioIn, db = Depends(get_db)):
     # Añade el beneficiario a TODOS los gastos del grupo (sin duplicados)
     res = await db["gastos"].update_many(
         {"grupoId": grupo_id},                      # <-- si guardas grupoId como ObjectId
