@@ -1,16 +1,16 @@
-
-import os, sys, traceback
+import os
+from fastapi import FastAPI
+from fastapi import HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from fastapi import Request
 from bson import ObjectId
 from utils_gemini import extraer_ticket_con_gemini
 import base64
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request, HTTPException
-from pymongo import MongoClient
 
-app = FastAPI(docs_url="/docs", redoc_url=None, openapi_url="/openapi.json")
+app = FastAPI()
 
 class BeneficiarioIn(BaseModel):
     beneficiario: str
@@ -34,36 +34,6 @@ app.add_middleware(
 MONGO_URL = os.getenv("MONGO_URL")
 client = AsyncIOMotorClient(MONGO_URL)
 db = client["splitbill_db"]
-
-# Log de excepciones a STDERR (se ven en Vercel → Deployments → Logs)
-@app.middleware("http")
-async def log_errors(request: Request, call_next):
-    try:
-        return await call_next(request)
-    except Exception:
-        traceback.print_exc(file=sys.stderr)
-        raise
-
-@app.get("/health", include_in_schema=False)
-def health():
-    return {"ok": True}
-
-@app.get("/health/db", include_in_schema=False)
-def health_db():
-    uri = os.environ.get("MONGODB_URI")
-    dbn = os.environ.get("MONGODB_DB")
-    if not uri or not dbn:
-        raise HTTPException(500, "Missing MONGODB_URI or MONGODB_DB")
-    client = MongoClient(uri, serverSelectionTimeoutMS=3000)
-    client.admin.command("ping")   # falla si no conecta
-    return {"db": dbn, "ping": "ok"}
-
-@app.get("/debug/env", include_in_schema=False)
-def debug_env():
-    # NO mostramos valores, solo si existen
-    keys = ["MONGODB_URI", "MONGODB_DB", "JWT_SECRET"]
-    present = {k: (k in os.environ) for k in keys}
-    return {"present": present, "python": sys.version}
 
 @app.get("/")
 async def root():
