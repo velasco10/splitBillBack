@@ -112,21 +112,14 @@ async def obtener_grupos():
 @app.get("/grupos/{id}")
 async def obtener_grupo(id: str):
     try:
-        # 1) Validar id y probar como ObjectId
         oid = ObjectId(id)
+        doc = await db["grupos"].find_one({"_id": oid})
+        if not doc:
+            doc = await db["grupos"].find_one({"_id": id})  # por si _id es string
     except InvalidId:
-        # Si no es ObjectId válido, probamos si en tu colección el _id es STRING
         doc = await db["grupos"].find_one({"_id": id})
-        if doc:
-            doc["_id"] = str(doc["_id"])
-            return doc
-        raise HTTPException(status_code=400, detail="id inválido")
-
-    # 2) Buscar por ObjectId y, si no existe, intentar por string (por si hay mezcla en la colección)
-    doc = await db["grupos"].find_one({"_id": oid}) or await db["grupos"].find_one({"_id": id})
     if not doc:
         raise HTTPException(status_code=404, detail="no encontrado")
-
     doc["_id"] = str(doc["_id"])
     return doc
 
