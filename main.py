@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 from utils_gemini import extraer_ticket_con_gemini
 import jwt
 import bcrypt
+import stripe
 
 load_dotenv()
 
@@ -23,6 +24,9 @@ GRUPOS_FREE_MAX  = 4
 JWT_SECRET       = os.getenv("JWT_SECRET", "supersecret_cambiame")
 JWT_ALGORITHM    = "HS256"
 JWT_EXPIRY_DAYS  = 30
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
+STRIPE_PRICE_ID = os.getenv("STRIPE_PRICE_ID")
+STRIPE_WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "")
 
 security = HTTPBearer(auto_error=False)
 
@@ -92,6 +96,12 @@ class PagoProgramadoIn(BaseModel):
     dia_mes:      int                   # 1-28, día del mes en que se genera
     activo:       bool = True
     omitir_mes:   Optional[str] = None  # "YYYY-MM" si el usuario pidió no mostrar este mes
+
+
+class SuscripcionIn(BaseModel):
+    success_url: str = "splitbill://perfil?pago=ok"
+    cancel_url:  str = "splitbill://perfil?pago=cancelado"
+
 
 # ── CORS y Middleware ─────────────────────────────────────────────────────────
 
@@ -664,3 +674,117 @@ async def procesar_ticket(
     except Exception as e:
         print(f"DEBUG ERROR TICKET: {str(e)}")
         raise HTTPException(status_code=400, detail=f"Error en el Agente: {str(e)}")
+        
+# ── Stripe ────────────────────────────────────────────────────────────────────
+
+@app.post("/stripe/crear_suscripcion")
+async def crear_suscripcion(
+    db = Depends(get_db),
+    usuario: dict = Depends(get_usuario_requerido)
+):  
+    if usuario.get("plan") == "premium":
+        raise HTTPException(status_code=400, detail="Ya tienes el plan Premium")
+
+    try:
+        # Crear o recuperar cliente de Stripe
+        stripe_customer_id = usuario.get("stripe_customer_id")
+
+        if not stripe_customer_id:
+            customer = stripe.Customer.create(
+                email=usuario["email"],
+                name=usuario["nombre"],
+                metadata={"usuario_id": usuario["_id"]}
+            )
+            stripe_customer_id = customer.id
+            await db["usuarios"].update_one(
+                {"_id": ObjectId(usuario["_id"])},
+                {"$set": {"stripe_customer_id": stripe_customer_id}}
+            )
+
+        # Crear sesión de pago
+        session = stripe.checkout.Session.create(
+            customer=stripe_customer_id,
+            payment_method_types=["card"],
+            line_items=[{
+                "price": STRIPE_PRICE_ID,
+                "quantity": 1,
+            }],
+            mode="subscription",
+            success_url="splitbill://perfil?pago=ok",
+            cancel_url="splitbill://perfil?pago=cancelado",
+        )
+
+        return {
+            "url":        session.url,
+            "session_id": session.id
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.post("/stripe/webhook")
+async def stripe_webhook(request: Request, db=Depends(get_db)):
+    payload    = await request.body()
+    sig_header = request.headers.get("stripe-signature", "")
+
+    try:
+        if STRIPE_WEBHOOK_SECRET:
+            event = stripe.Webhook.construct_event(
+                payload, sig_header, STRIPE_WEBHOOK_SECRET
+            )
+        else:
+            data  = await request.json()
+            event = stripe.Event.construct_from(data, stripe.api_key)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    obj = event["data"]["object"]
+
+    # Pago completado — activar premium
+    if event["type"] == "checkout.session.completed":
+        customer_id = obj.customer
+        sub_id      = obj.subscription
+        if customer_id:
+            await db["usuarios"].update_one(
+                {"stripe_customer_id": customer_id},
+                {"$set": {
+                    "plan": "premium",
+                    "stripe_subscription_id": sub_id,
+                }}
+            )
+
+    # Suscripción cancelada o pago fallido
+    elif event["type"] in ["customer.subscription.deleted", "invoice.payment_failed"]:
+        customer_id = obj.customer
+        if customer_id:
+            await db["usuarios"].update_one(
+                {"stripe_customer_id": customer_id},
+                {"$set": {"plan": "free"}}
+            )
+
+    # Renovación correcta
+    elif event["type"] == "invoice.payment_succeeded":
+        customer_id = obj.customer
+        if customer_id:
+            await db["usuarios"].update_one(
+                {"stripe_customer_id": customer_id},
+                {"$set": {"plan": "premium"}}
+            )
+
+    return {"msg": "ok"}
+
+@app.post("/stripe/cancelar")
+async def cancelar_suscripcion(
+    db = Depends(get_db),
+    usuario: dict = Depends(get_usuario_requerido)
+):
+    sub_id = usuario.get("stripe_subscription_id")
+    if not sub_id:
+        raise HTTPException(status_code=400, detail="No tienes suscripción activa")
+
+    try:
+        # Cancela al final del período actual, no inmediatamente
+        stripe.Subscription.modify(sub_id, cancel_at_period_end=True)
+        return {"msg": "Suscripción cancelada al final del período"}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
